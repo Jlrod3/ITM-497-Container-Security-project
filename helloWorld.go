@@ -8,7 +8,7 @@ import (
 
 func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		fmt.Printf(w, "Hello World!")
+		fmt.Fprintf(w, "Hello World!")
 	})
 
 	port := ":8069"
