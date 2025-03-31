@@ -7,7 +7,9 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello World!")
+	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Printf(w, "Hello World!")
+	})
 
 	port := ":8069"
 	fmt.Printf("Server starting on port %s...\n", port)
